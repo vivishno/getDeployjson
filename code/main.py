@@ -85,7 +85,7 @@ def main():
             'parameters': parameters
         }
      }
-
+    deployment_async_operation=None
     try:
         validate=client.deployments.validate(resource_group,"azure-sample",deployment_properties)
         validate.wait()
@@ -101,6 +101,11 @@ def main():
     except Exception as ex:
         raise ActionDeploymentError(ex)
     print("Deployment done")
+    print(deployment_async_operation)
+    print("next----------")
+    print(deployment_async_operation.kind)
+    print(deployment_async_operation.properties)
+    
 
 if __name__ == "__main__":
     main()
