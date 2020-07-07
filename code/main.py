@@ -103,7 +103,8 @@ def main():
     print("Deployment done")
     print(deployment_async_operation)
     print("next----------")
-    print(deployment_async_operation.kind)
+    print(deployment_async_operation.result)
+    print("next----------")
     print(deployment_async_operation.properties)
     
 
