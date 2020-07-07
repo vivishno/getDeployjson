@@ -105,7 +105,7 @@ def main():
     print("next----------")
     print(deployment_async_operation.result())
     print("next----------")
-    print(deployment_async_operation.status())
+    print(deployment_async_operation.result().properties)
     
 
 if __name__ == "__main__":
